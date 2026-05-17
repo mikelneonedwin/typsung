@@ -1,7 +1,8 @@
 import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Play, RotateCcw, Moon, Sun } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
+import { Moon, Play, RotateCcw, Sun } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import audioUrl from "./assets/Hold On - Justin Bieber.m4a";
@@ -179,6 +180,7 @@ export default function App() {
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-background flex flex-col items-center justify-center font-sans">
+      <Analytics />
       <audio
         ref={audioRef}
         src={audioUrl}
